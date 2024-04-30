@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Nivel de Luz
+    </ion-title>
+  </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-item>
+      <ion-label position="stacked" style="font-size: 25px;">Nivel De Luminosidad</ion-label>
+      <ion-input type="number" [(ngModel)]="luminosidad"></ion-input>
+    </ion-item>
+    <br><br><br><br><br>
+    <div class="termometro-container">
+      <div class="termometro-bola" [style.bottom]="luminosidad + '%'"></div>
+      <div class="termometro-progress" [style.height]="luminosidad + '%'" [ngClass]="{'frio': luminosidad < 33, 'templado': luminosidad >= 33 && luminosidad < 66, 'calor': luminosidad >= 66}"></div>
+    </div>
+  
+    <ion-range class="range-slider" [(ngModel)]="luminosidad" min="0" max="100" pin="true" color="danger">
+      <ion-label slot="start">0%</ion-label>
+      <ion-label slot="end">100%</ion-label>
+    </ion-range>
+  
+  
+    
+  </ion-content>
+  
+  
+  

@@ -1,0 +1,146 @@
+ion-title{
+  text-align: center;
+}
+#cintainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circular-progress {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background: conic-gradient(#FFE503 3.6deg, #e3e3e3 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 210px;
+  width: 210px;
+  border-radius: 50%;
+  background-color: #1E1E1F
+}
+.progress-value {
+  position: relative;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+.text {
+  font-size: 28px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Global styles */
+ion-app {
+  background-color: #f9f9f9;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+ion-header {
+  ion-toolbar {
+      ion-title {
+          text-align: center;
+          font-size: 24px;
+          color: #000;
+      }
+  }
+}
+
+/* Content styles */
+ion-content {
+  #container {
+    background-color: #8d878713;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+
+  .circular-progress {
+      background-color: #ddd;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .progress-value {
+          font-size: 24px;
+          font-weight: bold;
+      }
+  }
+}
+
+/* Estilos para la página */
+ion-content {
+  --ion-background-color: #ffffff;
+}
+
+.termometro-container {
+  position: relative;
+  width: 60px; /* Ancho del termómetro */
+  height: 300px; /* Altura del termómetro */
+  background-color: #c4f3ef;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 0 auto; /* Centra horizontalmente */
+}
+
+.termometro-progress {
+  background-color: #d61f22;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px; /* Ancho de la barra de progreso */
+  transition: height 0.5s ease-in-out;
+  border-bottom-left-radius: 10px; /* Ajusta las esquinas de la barra */
+  border-bottom-right-radius: 10px;
+}
+
+.termometro-bola {
+  background-color: #c4f3ef;
+  // border: 2px solid #595757;
+  border-radius: 50%;
+  position: absolute;
+  width: 40px; /* Diámetro de la bola */
+  height: 40px;
+  left: 50%;
+  bottom: calc(100% - 20px); /* Posición inicial de la bola */
+  transform: translateX(-50%);
+  transition: bottom 0.5s ease-in-out;
+}
+
+/* Estilos para el ion-range */
+.range-slider {
+  width: 300px; /* Ancho del ion-range */
+  margin: 20px auto; /* Centra horizontalmente */
+}
+
+/* Estilos para los emoticones */
+.emoticon {
+  font-size: 36px;
+  text-align: center;
+  margin-top: -36px;
+}
+
+/* Cambio de color del pin del ion-range */
+.range-pin {
+  background-color: #d61f22 !important;
+}
+
+/* Eliminar bordes en los ion-items */
+ion-item {
+  --inner-border-radius: 0;
+}

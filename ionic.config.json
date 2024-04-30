@@ -1,0 +1,7 @@
+{
+  "name": "BddSumativa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
